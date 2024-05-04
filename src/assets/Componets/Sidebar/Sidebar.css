@@ -1,0 +1,13 @@
+.Sidebarbodytransform{
+    transform: translateX(-1900px) !important;
+}
+.Sidebarbodytransformbtn{
+    transform: translateX(1900px) !important;
+    /* transition: all  ; */
+}
+.Sidebarbody{
+    transition: transform .5s ease;
+}
+.sidebatbtn:hover{
+    text-decoration: underline !important;
+}

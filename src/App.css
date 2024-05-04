@@ -1,0 +1,10 @@
+.pointer{
+    cursor: pointer;
+}
+.hiddenscrollbar{
+    -webkit-overflow-scrolling: auto;
+    scrollbar-width: none; 
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  }
