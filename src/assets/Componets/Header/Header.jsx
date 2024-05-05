@@ -18,6 +18,7 @@ const Header = () => {
     setisopen(true)
   }
   const userlogout = ()=>{
+    localStorage.removeItem("logincredentials")
     dispatch(logout())
   }
   return (
