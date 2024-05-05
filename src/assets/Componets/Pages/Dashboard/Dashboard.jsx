@@ -6,6 +6,7 @@ import usericon from "../../../images/usericon.png"
 import cources from "../../../images/cources.png"
 import star from "../../../images/star.png"
 import CustomCard from '../../miniComponents/CustomCard/CustomCard'
+import Coursedetails from '../coursedetails/Coursedetails'
 
 const Dashboard = () => {
   return (
@@ -90,16 +91,16 @@ const Dashboard = () => {
         <Row className='p-2'>
           <h4 className="my-4">My Recent teaching</h4>
           <Col className="my-2" md="3" sm="12">
-            <CustomCard Cost={800} Ratting={4}/>
+            <CustomCard id={1} Cost={800} Ratting={4}/>
           </Col>
           <Col className="my-2" md="3" sm="12">
-            <CustomCard Cost={1100} Ratting={3.8}/>
+            <CustomCard id={2} Cost={1100} Ratting={3.8}/>
           </Col>
           <Col className="my-2" md="3" sm="12">
-            <CustomCard Cost={890} Ratting={4.5}/>
+            <CustomCard id={3} Cost={890} Ratting={4.5}/>
           </Col>
           <Col className="my-2" md="3" sm="12">
-            <CustomCard Cost={999} Ratting={3.5}/>
+            <CustomCard id={4} Cost={999} Ratting={3.5}/>
           </Col>
         </Row>
       </Container>

@@ -15,7 +15,7 @@ const Sidebar = () => {
     const [show, setShow] = React.useState(false);
     
     return (
-        <Container onClick={() => { setShow((i) => !i) }} style={{ left: "0px", top: "0px", zIndex: 4, backgroundColor: "#112244", width: 'fit-content',zIndex:"89" }} className={`position-fixed d-flex flex-column p-3 vh-100 Sidebarbody ${!show && "Sidebarbodytransform"}`}>
+        <Container onClick={() => { setShow((i) => !i) }} style={{ left: "0px", top: "0px", zIndex: 89, backgroundColor: "#112244", width: 'fit-content' }} className={`position-fixed d-flex flex-column p-3 vh-100 Sidebarbody ${!show && "Sidebarbodytransform"}`}>
             <Image className="rounded-5 me-auto" src={sitelogo} />
             {!show ? <div
                 style={{ backgroundColor: "#112244",color:"white" }}

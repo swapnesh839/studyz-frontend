@@ -1,5 +1,6 @@
 const initialState = {
-    user: "",
+    name: "",
+    type:"",
     isloggedin: false
 };
 
@@ -8,7 +9,8 @@ const Authentication = (state = initialState, action) => {
         case "login":
             return {
                 ...state,
-                user: action.payload.user,
+                user: action.payload.user.name,
+                type: action.payload.user.type,
                 isloggedin: true
             };
         case "logout":
