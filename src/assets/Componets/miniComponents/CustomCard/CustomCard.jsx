@@ -1,7 +1,9 @@
 import React from 'react'
 import { Button, Card } from "react-bootstrap";
-import Rating from "react-rating"
 import { Link,useSearchParams,useParams } from 'react-router-dom';
+import { Rating } from '@smastrom/react-rating'
+
+import '@smastrom/react-rating/style.css'
 
 const CustomCard = ({Ratting,Cost,id}) => {
   return (
@@ -13,7 +15,7 @@ const CustomCard = ({Ratting,Cost,id}) => {
                 <span className='bg-primary-subtle rounded-1 px-1'>live</span>
             </div>
             <div className="d-flex my-3 justify-content-between align-items-center">
-                <Rating readonly initialRating={Ratting}/>
+                <Rating className='pe-2' readOnly value={Ratting}/>
                 <span>{Cost}/-</span>
             </div>
                 <p>people have not enrolled in recently</p>

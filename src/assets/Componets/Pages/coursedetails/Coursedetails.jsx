@@ -7,9 +7,9 @@ const Coursedetails = () => {
     const { id, type } = Object.fromEntries(searchParams);
 
     return (
-        <div style={{ minHeight: "100vh" }}>
+        <div className='p-3'>
             <Container fluid>
-                <Container className="shadow-lg m-4 p-3">
+                <Container className="shadow-lg  p-3">
                     <Row>
                             <h5 className="py-2 border-bottom">Course Details for {type} with id {id}</h5>
                         <Col md="8">

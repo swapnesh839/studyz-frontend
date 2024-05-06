@@ -4,7 +4,8 @@ import { useDispatch } from 'react-redux'
 import { login } from "../../Context/Actions/AuthAction.js"
 import { Button, Container, Form } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
-// import { GetLocalstoragedata, SettLocalstoragedata } from '../../../LocalstorageFunctions/LocalstorageFunctions.js'
+import sign from 'jwt-encode'
+import { jwtDecode } from 'jwt-decode'
 
 export const Loginpage = () => {
     const navigate = useNavigate()
@@ -25,7 +26,6 @@ export const Loginpage = () => {
         }));
     }
 
-    // const [Localdata, Setlocaldata] = useState(null)
     useEffect(() => {
         const storeddata = localStorage.getItem("logincredentials")
         if (storeddata) {
@@ -37,20 +37,25 @@ export const Loginpage = () => {
 
     const FormSubmit = (e) => {
         e.preventDefault()
+        let x = sign(FormData,"67tguysgxx2wuib8&$#")
+        let y = jwtDecode(x)
+        console.log(FormData,x,y);
         if (FormData.email != "" && FormData.password != "") {
-            axios.get(`http://localhost:3000/api/login/user?email=${FormData.email}&password=${FormData.password}`)
-                .then((res) => {
-                    console.log(res.data);
-                    // const resdata = res.data
-                    // SettLocalstoragedata("logincredentials", res.data)
-                    localStorage.setItem("logincredentials", JSON.stringify(res.data))
-                    dispatch(login(res.data))
-                    navigate("/")
-                }).catch((err) => {
-                    console.warn(err);
-                })
-        } else {
+            // axios.get(`http://localhost:3000/api/login/user?email=${FormData.email}&password=${FormData.password}`)
+            // .then((res) => {
+            //     console.log(res.data);
+            //     // const resdata = res.data
+            //     // SettLocalstoragedata("logincredentials", res.data)
+            //     localStorage.setItem("logincredentials", JSON.stringify(res.data))
+            //     dispatch(login(res.data))
+            //     navigate("/")
+            // }).catch((err) => {
+            //     console.warn(err);
+            // })
+            // axios.post(`http://localhost:3000/api/login/user`,(jwtencode(FormData)))
+            // .then((res)=>{
 
+            // })
         }
     }
 
